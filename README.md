@@ -1,2 +1,3 @@
 # portfolio
-An app that is a portfolio of different architectures
+This app is like a portfolio with different architectures as MVP, MVVM and design patterns like Singleton.
+Also works with different libraries like Room, Retrofit, Hint, ...
