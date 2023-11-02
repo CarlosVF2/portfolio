@@ -10,4 +10,9 @@
     <string name="menu_mvvm">MVVM</string>
     <string name="menu_room">Room</string>
     <string name="menu_mvp">MVP</string>
+    <!-- View MVVM -->
+    <string name="button_change_text">Cambiar texto</string>
+
+    <!-- Errors -->
+    <string name="error_changing_text">No se puede cambiar el texto</string>
 </resources>
