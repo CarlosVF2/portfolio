@@ -1,4 +1,4 @@
-package com.cv.portfolio.ui.gallery
+package com.cv.portfolio.ui.room
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.cv.portfolio.databinding.FragmentGalleryBinding
+import com.cv.portfolio.databinding.FragmentRoomBinding
 
-class GalleryFragment : Fragment() {
+class RoomFragment : Fragment() {
 
-    private var _binding: FragmentGalleryBinding? = null
+    private var _binding: FragmentRoomBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+        val roomViewModel =
+            ViewModelProvider(this)[RoomViewModel::class.java]
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentRoomBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner) {
+        roomViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

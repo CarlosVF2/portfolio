@@ -3,8 +3,8 @@
     <!-- Menu -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title" translatable="false">Carlos Alberto Vega Fernandez</string>
+    <string name="nav_header_subtitle" translatable="false">ww.linkedin.com/in/carlos-alberto-vega-fernández</string>
     <string name="nav_header_desc">Navigation header</string>
     <!-- Options Menu -->
     <string name="menu_mvvm">MVVM</string>
