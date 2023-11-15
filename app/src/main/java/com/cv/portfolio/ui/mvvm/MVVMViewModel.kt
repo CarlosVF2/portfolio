@@ -4,10 +4,18 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
+/**
+ * View model for MVVM Fragment
+ */
 class MVVMViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "Actually doesn't change the value"
     }
-    val text: LiveData<String> = _text
+
+    var text: LiveData<String> = _text
+
+    fun changeText(text : String){
+        _text.value = text
+    }
 }
