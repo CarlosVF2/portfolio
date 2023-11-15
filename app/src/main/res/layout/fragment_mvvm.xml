@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.mvvm.MVVMFragment">
 
+    <Button
+        android:id="@+id/buttonNavigateDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_navigate_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChangeText" />
+
     <TextView
         android:id="@+id/textViewChangeText"
         android:layout_width="wrap_content"

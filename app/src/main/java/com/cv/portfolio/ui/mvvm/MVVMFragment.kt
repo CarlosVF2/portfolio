@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.cv.portfolio.R
 import com.cv.portfolio.databinding.FragmentMvvmBinding
 import com.google.android.material.textfield.TextInputLayout
 
@@ -16,22 +19,29 @@ import com.google.android.material.textfield.TextInputLayout
  */
 class MVVMFragment : Fragment() {
 
-    private var _binding: FragmentMvvmBinding? = null
+    /**
+     * Binding of the fragment to obtains later the controls
+     */
+    private var fragmentMvvmBinding: FragmentMvvmBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    /**
+     * Make the get to always that get the binding in case that is null throws an exception
+     */
+    private val binding get() = fragmentMvvmBinding ?: throw Exception(getString(R.string.exception_binding_null))
+
+    /**
+     * That is scoped to the Activity. When multiple fragments use the same code, they are requesting ViewModels scoped to the parent Activity. If the parent Activity for all the Fragments is the same, the Fragments will get the same ViewModel since the ViewModelStoreOwner connected to the Activity remains the same.
+     */
+    private val model : MVVMViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val model =
-            ViewModelProvider(this)[MVVMViewModel::class.java]
 
-        _binding = FragmentMvvmBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+
+        fragmentMvvmBinding = FragmentMvvmBinding.inflate(inflater, container, false)
 
         val textViewChangeText: TextView = binding.textViewChangeText
         val textInputLayoutChangeText: TextInputLayout = binding.textInputLayoutFieldChangeText
@@ -42,11 +52,15 @@ class MVVMFragment : Fragment() {
         model.text.observe(viewLifecycleOwner) {
             textViewChangeText.text = model.text.value
         }
-        return root
+        val buttonNavigateDetail : Button = binding.buttonNavigateDetail
+        buttonNavigateDetail.setOnClickListener{
+            findNavController().navigate(R.id.action_nav_mvvm_to_nav_detail_mvvm)
+        }
+        return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        fragmentMvvmBinding = null
     }
 }

@@ -7,12 +7,16 @@
     <string name="nav_header_desc">Navigation header</string>
     <!-- Options Menu -->
     <string name="menu_mvvm">MVVM</string>
+    <string name="menu_detail_mvvm">Detail MVVM</string>
     <string name="menu_room">Room</string>
     <string name="menu_mvp">MVP</string>
     <!-- View MVVM -->
     <string name="button_change_text">Change text</string>
+    <string name="button_navigate_detail">Navigate to detail</string>
 
     <!-- Errors -->
     <string name="error_changing_text">Can\'t change the text</string>
+    <!-- Exceptions -->
+    <string name="exception_binding_null">The view is currently null</string>
 
 </resources>
