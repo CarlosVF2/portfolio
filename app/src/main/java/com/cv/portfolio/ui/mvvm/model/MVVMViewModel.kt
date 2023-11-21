@@ -1,4 +1,4 @@
-package com.cv.portfolio.ui.mvvm
+package com.cv.portfolio.ui.mvvm.model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

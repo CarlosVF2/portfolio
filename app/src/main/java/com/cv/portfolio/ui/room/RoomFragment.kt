@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.cv.portfolio.databinding.FragmentRoomBinding
 
+/**
+ * View (fragment) of the room database with MVVM architecture and coroutines kotlin
+ */
 class RoomFragment : Fragment() {
 
     private var _binding: FragmentRoomBinding? = null
@@ -22,14 +25,14 @@ class RoomFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val roomViewModel =
-            ViewModelProvider(this)[RoomViewModel::class.java]
+        val noteViewModel =
+            ViewModelProvider(this)[NoteViewModel::class.java]
 
         _binding = FragmentRoomBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textGallery
-        roomViewModel.text.observe(viewLifecycleOwner) {
+        noteViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

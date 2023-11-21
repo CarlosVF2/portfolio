@@ -8,10 +8,10 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.cv.portfolio.R
 import com.cv.portfolio.databinding.FragmentMvvmBinding
+import com.cv.portfolio.ui.mvvm.model.MVVMViewModel
 import com.google.android.material.textfield.TextInputLayout
 
 /**

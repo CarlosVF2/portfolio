@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.cv.portfolio.R
 import com.cv.portfolio.databinding.FragmentDetailMvvmBinding
+import com.cv.portfolio.ui.mvvm.model.MVVMViewModel
 
 /**
  * Fragment to represent the text modified before in Mvvm
