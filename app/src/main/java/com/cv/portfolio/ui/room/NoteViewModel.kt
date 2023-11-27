@@ -3,11 +3,14 @@ package com.cv.portfolio.ui.room
 import androidx.lifecycle.ViewModel
 import com.cv.portfolio.ui.room.db.entities.Note
 import com.cv.portfolio.ui.room.repository.NoteRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 /**
  * View model for the note and view of RoomFragment
  */
-class NoteViewModel(
+@HiltViewModel
+class NoteViewModel @Inject constructor(
     /**
      * Repository to obtains the data
      */

@@ -7,19 +7,14 @@ import androidx.room.RoomDatabase
 import com.cv.portfolio.ui.room.db.dao.NoteDao
 import com.cv.portfolio.ui.room.db.entities.Note
 
-@Database(
-    entities = [Note::class],
-    version = 1,
-    exportSchema = false
-)
-
 /**
  * Database for notes instance to operate with it
  */
+@Database(entities = [Note::class], version = 1, exportSchema = false)
 abstract class NoteDatabase: RoomDatabase() {
 
     /**
-     * Dao to make thw queries
+     * Dao to make the queries
      */
     abstract fun getNoteDao(): NoteDao
 

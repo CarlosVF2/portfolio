@@ -3,11 +3,12 @@ package com.cv.portfolio.ui.room.repository
 import androidx.lifecycle.LiveData
 import com.cv.portfolio.ui.room.db.NoteDatabase
 import com.cv.portfolio.ui.room.db.entities.Note
+import javax.inject.Inject
 
 /**
  * Repository to obtains the data (could be remote or local, in this case is local in persistance)
  */
-class NoteRepository(
+class NoteRepository @Inject constructor(
     /**
      * Database to interact and obtain the data
      */
