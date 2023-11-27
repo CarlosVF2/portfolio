@@ -13,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 /**
  * View (fragment) of the room database with MVVM architecture and coroutines kotlin
  */
-//@AndroidEntryPoint
+@AndroidEntryPoint
 class RoomFragment : Fragment() {
 
     private var _binding: FragmentRoomBinding? = null

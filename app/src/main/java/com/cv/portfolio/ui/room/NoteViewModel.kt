@@ -1,7 +1,7 @@
 package com.cv.portfolio.ui.room
 
 import androidx.lifecycle.ViewModel
-import com.cv.portfolio.ui.room.database.entities.Note
+import com.cv.portfolio.ui.room.db.entities.Note
 import com.cv.portfolio.ui.room.repository.NoteRepository
 
 /**

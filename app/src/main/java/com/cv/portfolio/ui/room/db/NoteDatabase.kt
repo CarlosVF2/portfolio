@@ -1,11 +1,11 @@
-package com.cv.portfolio.ui.room.database
+package com.cv.portfolio.ui.room.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.cv.portfolio.ui.room.database.dao.NoteDao
-import com.cv.portfolio.ui.room.database.entities.Note
+import com.cv.portfolio.ui.room.db.dao.NoteDao
+import com.cv.portfolio.ui.room.db.entities.Note
 
 @Database(
     entities = [Note::class],

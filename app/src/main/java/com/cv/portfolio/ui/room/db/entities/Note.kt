@@ -1,4 +1,4 @@
-package com.cv.portfolio.ui.room.database.entities
+package com.cv.portfolio.ui.room.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -1,8 +1,8 @@
-package com.cv.portfolio.ui.room.database.dao
+package com.cv.portfolio.ui.room.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.cv.portfolio.ui.room.database.entities.Note
+import com.cv.portfolio.ui.room.db.entities.Note
 
 /**
  * Interface of the Note entity to make all the queries and use the database
